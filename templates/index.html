@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/main.css">
+
+        <title>ZORTIFY</title>
+        <link rel="icon" type="image/ico" href="static/favicon.png">
+    </head>
+    <body>
+      <div>
+        <div class="centered">ZORTIFY</div>
+        <!--- ADD ITEMS FORM -->
+        <div class="songs">
+        <form action="/add_song" method="POST">   
+          <select name="select_song">
+            <option> Choose a song </option>
+            {% for song in all_songs %}
+            <option value="{{ song }}"> {{ song.0 }}</option> <br>
+            {% endfor %}
+          </select>
+          <input type="submit" value="ADD SONG">
+        </form>    
+        </div>
+        <!-- PLAYLIST FORM -->
+        <div id="playlist">
+            <h2 class="playlist">MY PLAYLIST</h2>
+            <hr class = "line">
+              <form action="/playlist" method="POST">
+                {% for song in my_playlist %}
+                {% set pl_song = song.split("'") %}
+                <label style="color: azure;" for="{{pl_song}}" name="{{pl_song}}"> {{ pl_song.3 }}</label><br>
+                {% endfor %} 
+              </form>       
+        </div>
+      </div>
+    </body>
+</html>

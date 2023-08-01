@@ -1,25 +1,20 @@
-body{
-    position: relative;
-      background-image:url("banner.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      margin: 0;
-      padding: 0;
+  .bg{
+    background-image:url("banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 600px;
   }
-  
   
   .centered{
       color: rgb(237, 82, 39);
       font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       text-align: center;
       font-size: 600%;
-      margin-block: 50px;
+      
   }
   
   .songs{
-  
     text-align:center;
-  
     color: greenyellow
   }
   select{

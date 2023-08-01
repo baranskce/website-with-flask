@@ -16,9 +16,11 @@ def add_songs():
     session.modified = True
     return render_template("index.html", all_songs = session["all_songs"],
                                         my_playlist = session["playlist"])
+#404 error                                        
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("404.html"), 404
+#505 error
 @app.errorhandler(500)
 def page_not_found(e):
     return render_template("505.html"), 500

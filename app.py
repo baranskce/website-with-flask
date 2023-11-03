@@ -19,7 +19,7 @@ def add_songs():
 #404 error                                        
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template("404.html"), 404
+    return render_template("404.html"), 405
 #505 error
 @app.errorhandler(500)
 def page_not_found(e):
